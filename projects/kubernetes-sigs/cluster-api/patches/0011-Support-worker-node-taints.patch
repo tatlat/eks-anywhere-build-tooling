@@ -1,7 +1,7 @@
-From 6a53cf605a46eec31db899a2310cbde569e5acda Mon Sep 17 00:00:00 2001
+From f284290a1d021fa17d696c10e5def4a601cb5087 Mon Sep 17 00:00:00 2001
 From: Daniel Budris <budris@amazon.com>
 Date: Fri, 17 Dec 2021 13:38:39 -0800
-Subject: [PATCH 11/37] Support worker node taints
+Subject: [PATCH 11/38] Support worker node taints
 
 seperate taints template into its own template
 
@@ -129,10 +129,10 @@ index dd4214699..fd3c9d15d 100644
  	if nodeLabels == "" {
  		return ""
 diff --git a/bootstrap/kubeadm/internal/controllers/kubeadmconfig_controller.go b/bootstrap/kubeadm/internal/controllers/kubeadmconfig_controller.go
-index 389b33f84..d7814f210 100644
+index 50146bd76..f9070fa77 100644
 --- a/bootstrap/kubeadm/internal/controllers/kubeadmconfig_controller.go
 +++ b/bootstrap/kubeadm/internal/controllers/kubeadmconfig_controller.go
-@@ -718,6 +718,9 @@ func (r *KubeadmConfigReconciler) joinWorker(ctx context.Context, scope *Scope)
+@@ -736,6 +736,9 @@ func (r *KubeadmConfigReconciler) joinWorker(ctx context.Context, scope *Scope)
  		if scope.Config.Spec.JoinConfiguration.NodeRegistration.KubeletExtraArgs != nil {
  			bottlerocketConfig.KubeletExtraArgs = scope.Config.Spec.JoinConfiguration.NodeRegistration.KubeletExtraArgs
  		}

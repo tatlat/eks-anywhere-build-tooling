@@ -1,7 +1,7 @@
-From 2bb481e68c56eeb5da6ce40d6c60f25ed96f036c Mon Sep 17 00:00:00 2001
+From 2021795d756460399add1e599125b5f9a45f7f9c Mon Sep 17 00:00:00 2001
 From: Jackson West <jgw@amazon.com>
 Date: Sat, 6 May 2023 14:08:17 -0500
-Subject: [PATCH 27/37] Patch haproxy maxconn value to avoid ulimit issue
+Subject: [PATCH 27/38] Patch haproxy maxconn value to avoid ulimit issue
 
 EKS-A uses haproxy 2.5 which errors if the maxconn value
 requires more FDs than allowed by the ulimit setting of docker.

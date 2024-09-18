@@ -1,7 +1,7 @@
-From 5dc60169cd69e5294a21c499ac54d397fe369a52 Mon Sep 17 00:00:00 2001
+From 131284eb2c8212df1bd82041d69143ffa45787c8 Mon Sep 17 00:00:00 2001
 From: Cavaughn Browne <cxbrowne@amazon.com>
 Date: Thu, 20 Jul 2023 11:05:49 -0500
-Subject: [PATCH 31/37] allow registry mirror configurations to be mutable for
+Subject: [PATCH 31/38] allow registry mirror configurations to be mutable for
  BR
 
 ---
